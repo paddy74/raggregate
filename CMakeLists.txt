@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.14 FATAL_ERROR)
-project(Rag VERSION 0.1 LANGUAGES CXX)
+project(RAg VERSION 0.1 LANGUAGES CXX)
 set(PROJECT_NAME_L rag)
 
 # -----------------------------------------------------------------------------
@@ -49,7 +49,7 @@ message(STATUS "Setting target properties")
 # Set the library sources
 # -----------------------
 set(libsrc
-    src/rag.cpp
+    src/Raggregator.cpp
 )
 
 # Add the library

@@ -1,7 +1,3 @@
-#include <rag/rag.hpp>
+#include <rag/Raggregator.hpp>
 
-int main()
-{
-    rag::SampleClass a();
-    return 0;
-}
+int main() { return 0; }
