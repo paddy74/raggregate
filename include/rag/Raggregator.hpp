@@ -1,6 +1,7 @@
 #pragma once
 
 #include <array>
+#include <rag/typeUtils.hpp>
 #include <string>
 
 namespace rag
@@ -30,15 +31,20 @@ public:
 
     /* Public class methods */
 
-    // TODO: One or more rank lists
+    // TODO: One or more rank lists (DCL50-CPP)
     /**
      * @brief Conduct rank aggregation on two rank lists.
      *
-     * @param rankLists
-     * @return CType
+     * @tparam Container type.
+     * @tparam 0
+     * @param A
+     * @param B
+     * @return Container
      */
-    template <class CType>
-    CType raggregate(CType const & A, CType const & B);
+    template <
+        typename Container,
+        std::enable_if<typeUtils::is_container<Container>::value, int> = 0>
+    Container raggregate(Container const & A, Container const & B);
 
     /* Getters & setters */
 
